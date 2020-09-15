@@ -10,9 +10,3 @@
 ## Strictdf is a simple dataframe check
 
 ![1](images/1.jpeg)
-![2](images/2.jpeg)
-![3](images/3.jpeg)
-![4](images/4.jpeg)
-![5](images/5.jpeg)
-![6](images/6.jpeg)
-![test](images/test.jpeg)
