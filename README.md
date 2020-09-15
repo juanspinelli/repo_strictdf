@@ -10,3 +10,5 @@
 ## Strictdf is a simple dataframe check
 
 ![1](images/1.jpeg)
+
+# https://pypi.org/project/strictdf/
