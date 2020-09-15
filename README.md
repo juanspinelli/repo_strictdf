@@ -15,4 +15,7 @@
 ### https://pypi.org/project/strictdf/
 
 # Documentation
+
+##### Guide to setup and run the project.
+
 ### https://doc-strictdf.readthedocs.io/en/latest/
