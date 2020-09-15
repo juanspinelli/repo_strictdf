@@ -11,4 +11,8 @@
 
 ![1](images/1.jpeg)
 
-# https://pypi.org/project/strictdf/
+# Pypi
+### https://pypi.org/project/strictdf/
+
+# Documentation
+### https://doc-strictdf.readthedocs.io/en/latest/
