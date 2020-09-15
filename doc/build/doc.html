@@ -1,0 +1,270 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>strictdf &#8212; strictdf 0.0.13 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Welcome to strictdf’s documentation!" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="strictdf">
+<h1><strong>strictdf</strong><a class="headerlink" href="#strictdf" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="dockerfile">
+<h2><strong>Dockerfile</strong><a class="headerlink" href="#dockerfile" title="Permalink to this headline">¶</a></h2>
+<p>Build the dockerfile to create an image</p>
+<p><strong>docker build - - pull - - no-cache -t jupyter_library .</strong></p>
+<p>Once it’s done, run this command to create the container</p>
+<p><strong>docker run -d - - name jupyter_library -p 8888:8888 jupyter_library</strong></p>
+<div class="figure align-center">
+<img alt="_images/7.jpeg" src="_images/7.jpeg" />
+</div>
+<p>Then go to the browser and open the url localhost:8888 (The token is “jupyter”)</p>
+</div>
+<div class="section" id="pip-installation">
+<h2><strong>Pip Installation</strong><a class="headerlink" href="#pip-installation" title="Permalink to this headline">¶</a></h2>
+<p>pip install strictdf==0.1.0</p>
+</div>
+<div class="section" id="import">
+<h2><strong>Import</strong><a class="headerlink" href="#import" title="Permalink to this headline">¶</a></h2>
+<p>from <strong>strictdfds</strong> import StrictDataFrame</p>
+</div>
+<div class="section" id="create-the-object">
+<h2><strong>Create the object</strong><a class="headerlink" href="#create-the-object" title="Permalink to this headline">¶</a></h2>
+<p>df = pd.read_csv(“any_df.csv”)</p>
+<p>sdf = StrictDataFrame(df)</p>
+<div class="figure align-center">
+<img alt="_images/1.jpeg" src="_images/1.jpeg" />
+</div>
+</div>
+<div class="section" id="methods">
+<h2><strong>Methods</strong><a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>sdf.report()</strong>:</dt><dd><p>Returns the shape of the df and the total of nulls that were removed</p>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="figure align-center">
+<img alt="_images/2.jpeg" src="_images/2.jpeg" />
+</div>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>sdf.to_spark()</strong>:</dt><dd><p>This method converts pandas df to pyspark df</p>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="figure align-center">
+<img alt="_images/6.jpeg" src="_images/6.jpeg" />
+</div>
+</div>
+<div class="section" id="attributes">
+<h2><strong>Attributes</strong><a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>sdf.dtypes</strong></dt><dd><p>Analyzes all the columns and returns the type of data that is most repeated in each one.</p>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="figure align-center">
+<img alt="_images/3.jpeg" src="_images/3.jpeg" />
+</div>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>sdf.old_df</strong></dt><dd><p>Returns the original df</p>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="figure align-center">
+<img alt="_images/4.jpeg" src="_images/4.jpeg" />
+</div>
+<ul class="simple">
+<li><dl class="simple">
+<dt><strong>sdf.new_df</strong></dt><dd><p>Returns the df without null values</p>
+</dd>
+</dl>
+</li>
+</ul>
+<div class="figure align-center">
+<img alt="_images/5.jpeg" src="_images/5.jpeg" />
+</div>
+</div>
+<div class="section" id="libraries">
+<h2><strong>Libraries</strong><a class="headerlink" href="#libraries" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>Library</strong></p></td>
+<td><p><strong>Version</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>pandas</p></td>
+<td><p>1.0.*</p></td>
+</tr>
+<tr class="row-odd"><td><p>pyspark</p></td>
+<td><p>3.0.1</p></td>
+</tr>
+<tr class="row-even"><td><p>pytest</p></td>
+<td><p>5.3.*</p></td>
+</tr>
+<tr class="row-odd"><td><p>strictdf</p></td>
+<td><p>0.1.0</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="test">
+<h2><strong>Test</strong><a class="headerlink" href="#test" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="use-the-library">
+<h3>Use the library:<a class="headerlink" href="#use-the-library" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><ol class="arabic simple">
+<li><p>Run the Dockerfile.</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="2">
+<li><p>Open the jupyter notebook</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="3">
+<li><p>Open the file usando_libreria.ipynb and execute all cells</p></li>
+</ol>
+</li>
+</ul>
+</div>
+<div class="section" id="verify-the-unit-tests">
+<h3>Verify the unit tests:<a class="headerlink" href="#verify-the-unit-tests" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><ol class="arabic simple">
+<li><p>Run the Dockerfile.</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="2">
+<li><p><strong>docker exec -it jupyter_library /bin/bash</strong></p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="3">
+<li><p>Run <strong>pytest test_main.py -vv</strong></p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="4">
+<li><p>Verify the test results.</p></li>
+</ol>
+</li>
+</ul>
+<div class="figure align-center">
+<img alt="_images/test.jpeg" src="_images/test.jpeg" />
+</div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">strictdf</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><strong>strictdf</strong></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#dockerfile"><strong>Dockerfile</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pip-installation"><strong>Pip Installation</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#import"><strong>Import</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#create-the-object"><strong>Create the object</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#methods"><strong>Methods</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#attributes"><strong>Attributes</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#libraries"><strong>Libraries</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#test"><strong>Test</strong></a></li>
+</ul>
+</li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Welcome to strictdf’s documentation!</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Test Test.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.2.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/doc.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
